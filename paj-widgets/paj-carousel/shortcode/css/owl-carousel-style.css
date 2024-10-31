@@ -1,0 +1,168 @@
+/**
+ * PAJ styles for Carousel Each carousel can have different style
+ *
+ */
+
+.owl-carousel a,
+.owl-carousel a:hover,
+.owl-carousel a:active {
+	color: inherit !important;
+	text-decoration: none !important;
+}
+
+.paj-owl-caption-under {       
+	background: #eaeaea;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.paj-carousel-item-box {
+	border: 2px solid #879ea7;
+}
+
+.paj-carousel-item-over:hover .paj-owl-caption-over {
+	opacity: 0.9;
+	animation: pajcover 0.9s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+
+/**************Touchscreen animation********************/
+.paj-touch .paj-carousel-item-over:hover .paj-owl-caption-over {
+	animation: pajcover 1s;
+	animation-delay: 0.3s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.paj-owl-caption-over {
+	background: white;
+	opacity: 0;
+	overflow: hidden;
+	padding: 10px;
+	padding-top: 20%;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	bottom: -5px;
+	left: -5px;
+	text-align: center;
+	visibility: hidden;
+	z-index: 777;
+}
+
+@-webkit-keyframes pajcover {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+	to {
+		opacity: 0.9;
+		visibility: visible;
+	}
+}
+
+@keyframes pajcover {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+	to {
+		opacity: 0.9;
+		visibility: visible;
+	}
+}
+
+.pajowl-nav {
+	height: 30px;
+	position: absolute;
+	top: -28px;
+	right: 0;
+	line-height: 1.6;
+	width: 100%;
+}
+
+.pajowl-nav.disabled {
+	display: none;
+}
+
+.pajowl-prev,
+.pajowl-next {
+	background: #3D3D3D;
+	cursor: pointer;
+	color: white;
+	font-size: 14px;
+    margin: 0;
+	padding: 0 10px;
+	position: absolute;
+	z-index: 100;
+}
+
+.pajowl-prev {
+	right: 40px;
+}
+
+.pajowl-next {
+	right: 0px;
+}
+
+.pajimageframe {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.pajimageframe:before {
+	content: "";
+	display: block;
+	padding-top: 60%;
+}
+
+.imgcontainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.owl-carousel.owl-theme.pajowl .imgcontainer img {
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+ 	-webkit-align-self: center;
+	/*For tablet and phone devices*/
+}
+
+.paj-owl-heading h3{
+	text-align: center;
+	margin: 0 !important;
+	padding: 0.3em 0;
+	line-height: 1.2;
+}
+
+.paj-owl-text {
+	text-align: center;
+	padding: 0.3em 0;
+
+}
+
+.paj-owl-meta {
+	text-align: center;
+   	padding: 0.3em 0;
+	margin-bottom: 0;
+}
